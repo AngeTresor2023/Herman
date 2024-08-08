@@ -2,7 +2,7 @@ import { PrismaClient } from "@prisma/client";
 import { NextResponse } from "next/server";
 const prisma = new PrismaClient();
 
-import { NextResponse } from "next/server";
+
 export async function POST (request){
     const res = await request.json()
     const { name, qa, qr, pa, pv, date, desc } = res;
