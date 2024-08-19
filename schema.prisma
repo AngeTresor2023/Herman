@@ -27,7 +27,7 @@ model User {
 
 model Produit {
   id               String            @id @default(cuid())
-  name             String
+  name             String           
   date             DateTime
   qa               Int?
   stock            Int?
@@ -45,7 +45,6 @@ model Produit {
 
 model Vente {
   id            String   @id @default(cuid())
-  name          String
   nomproduit    String
   qtevendu      Int
   nomclient     String
@@ -98,7 +97,6 @@ model VenteHistory {
   id         String   @id @default(cuid())
   venteId    String
   vente      Vente    @relation(fields: [venteId], references: [id])
-  name       String
   date       DateTime
   qtevendu   Int
   prixvente  Float
